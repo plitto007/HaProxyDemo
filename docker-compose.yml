@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  haproxy:
+    image: haproxydemo/haproxy:1.6.15
+    build:
+      - ./haproxy/.
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8404:8404"
